@@ -32,7 +32,7 @@ public class ConsumerDemoCooperative {
         properties.setProperty("group.id", groupId);
         properties.setProperty("auto.offset.reset", "earliest");
         properties.setProperty("partition.assignment.strategy", CooperativeStickyAssignor.class.getName());
-        
+
 
         KafkaConsumer<String, String> kafkaConsumer = new KafkaConsumer<>(properties);
 
